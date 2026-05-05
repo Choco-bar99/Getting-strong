@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自律清單</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero-panel">
+            <div>
+                <p class="eyebrow">WEEKLY HABIT GRID</p>
+                <h1>自律清單</h1>
+                <p class="hero-copy">每周任務管理 + 完成進度追蹤。按天勾選，立即更新週進度。</p>
+            </div>
+            <div class="hero-metrics">
+                <div class="metric-card">
+                    <span>本週完成</span>
+                    <strong id="overall-percent">0%</strong>
+                    <div class="metric-bar">
+                        <div id="overall-bar"></div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <span>總任務</span>
+                    <strong id="total-habits">0</strong>
+                </div>
+                <div class="metric-card">
+                    <span>已完成格數</span>
+                    <strong id="completed-count">0</strong>
+                </div>
+                <div class="metric-card">
+                    <span>剩餘格數</span>
+                    <strong id="left-count">0</strong>
+                </div>
+            </div>
+        </header>
+
+        <main class="panel-grid">
+            <section class="panel panel-left">
+                <div class="panel-header">
+                    <div>
+                        <h2>我的習慣</h2>
+                        <p>新增每日任務，按週勾選完成。</p>
+                    </div>
+                    <button id="add-task">新增任務</button>
+                </div>
+                <div class="table-wrapper">
+                    <table id="task-table">
+                        <thead>
+                            <tr>
+                                <th>任務</th>
+                                <th>週一</th>
+                                <th>週二</th>
+                                <th>週三</th>
+                                <th>週四</th>
+                                <th>週五</th>
+                                <th>週六</th>
+                                <th>週日</th>
+                                <th>刪除</th>
+                            </tr>
+                        </thead>
+                        <tbody id="task-body"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel panel-right">
+                <div class="panel-block">
+                    <h3>每日進度</h3>
+                    <div class="daily-progress" id="daily-bars"></div>
+                </div>
+                <div class="panel-block">
+                    <h3>熱門習慣</h3>
+                    <div id="top-habits" class="habit-list"></div>
+                </div>
+                <div class="panel-block small-block">
+                    <h3>週總結語</h3>
+                    <p id="summary-copy">新增任務後開始記錄，每週都能看到成長痕跡。</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
